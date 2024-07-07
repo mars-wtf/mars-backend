@@ -17,6 +17,10 @@ app.use(cors("*"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get("/", (req, res) => {
+  res.json("running...");
+})
+
 // app.use("/static", express.static(__dirname + "/public"));
 
 app.use("/api/nft", routerNft);
